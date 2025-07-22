@@ -4,6 +4,7 @@ import NavBar from './components/NavBar.jsx';
 import HomePage from './components/HomePage.jsx';
 import ProductListing from './components/ProductListing.jsx';
 import ProductDetails from './components/ProductDetails.jsx';
+import AddProduct from './components/AddProduct.jsx';
 import './App.css'
 
 function App() {
@@ -13,7 +14,10 @@ function App() {
       <Routes>
         <Route path='/' element={<HomePage />} />
         <Route path='/products' element={<ProductListing />} />
-        <Route path='/products/:id' element={<ProductDetails />} /> 
+        <Route path='/products/:id' element={<ProductDetails />} />
+        <Route path='/addproduct' element={<AddProduct />} />
+        <Route path='/deleteproducts' element={<DeleteProduct />} />
+        <Route path='/editproduct' element={<EditProduct />} />
       </Routes>
     </>
   );

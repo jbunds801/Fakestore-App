@@ -6,7 +6,7 @@ import axios from "axios";
 const ProductListing = () => {
     const [products, setProducts] = useState([]);
     const navigate = useNavigate();
-    
+
     useEffect(() => {
         async function fetchProducts() {
             try {
@@ -60,3 +60,5 @@ const ProductListing = () => {
 };
 
 export default ProductListing;
+
+//should I have put this in a card component?

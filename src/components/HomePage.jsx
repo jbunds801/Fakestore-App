@@ -30,7 +30,7 @@ const HomePage = () => {
                 <Container>
                     <Row className="mb-5 text-center ">
                         <div>
-                            <h1>Store Header</h1>
+                            <h1>FakeStore is your home for discovering new items to love!</h1>
                         </div>
                     </Row>
 
@@ -38,16 +38,11 @@ const HomePage = () => {
                         <Col>
                             <Carousel fade data-bs-theme="dark" controls={false} indicators={false}>
                                 {image.map((product) => (
-                                    <Carousel.Item key={product.id} interval={2500}>
-                                        <img className='d-flex w-50 mx-auto my-5'
+                                    <Carousel.Item key={product.id} interval={2500}
+                                        className="carousel-image">
+                                        <img className='d-flex mx-auto my-4'
                                             src={product.image}
-                                            alt={`slide image of {product.title}`}
-                                            style={{ height: '400px', objectFit: 'contain' }}
-                                        />
-                                        {/* <Carousel.Caption style={{ textShadow: '2px 2px black' }}>
-                                    <h3>First Slide</h3>
-                                    <p>Description for the first slide</p>
-                                </Carousel.Caption> */}
+                                            alt={`slide image of ${product.title}`} />
                                     </Carousel.Item>
                                 ))}
                             </Carousel>
@@ -56,7 +51,7 @@ const HomePage = () => {
 
                     <div className="d-flex justify-content-center mt-5">
                         <Link to='/products'>
-                            <Button className="buttons" variant="outline-dark bg-violet-200">Products</Button>
+                            <Button className="buttons" variant="outline-dark">Products</Button>
                         </Link>
 
                     </div>

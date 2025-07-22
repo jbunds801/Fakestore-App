@@ -1,40 +1,51 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
-import { Row, Col } from "react-bootstrap";
+import { Row, Col, Button } from "react-bootstrap";
 import axios from "axios";
 
 const ProductDetails = () => {
     const { id } = useParams();
     const [product, setProduct] = useState(null);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
 
     useEffect(() => {
         async function fetchProduct() {
             try {
                 const response = await axios.get(`https://fakestoreapi.com/products/${id}`);
                 setProduct(response.data);
+                setError(null);
             } catch (error) {
-                console.error('Error fetching product:', error);
+                setError("Failed to fetch product. Please try again.");
+            } finally {
+                setLoading(false);
             }
         }
 
         fetchProduct();
     }, [id]);
 
-    if (!product) return <div>Loading...</div>;
+    if (loading) return <div>Loading...</div>;
 
     return (
-        <div>
+        <div className="p-3">
+            {error && <div style={{ color: 'red' }}>{error}</div>}
             <Row>
-                <Col md ={8} >
+                <Col lg={8} >
                     <img src={product.image} alt={product.title}
-                    className="w-50" />
+                        className="w-50 d-flex mx-auto my-3" />
                 </Col>
-                <Col md ={4}>
-                    <h1>{product.title}</h1>
-                    <p>${product.price}</p>
+                <Col lg={4} className="px-5 mt-5">
+                    <h2>{product.title}</h2>
+                    <p className="fs-4 my-5">${product.price}</p>
+                    <Button className="buttons" variant="outline-dark">
+                        Add to Cart</Button>
+
+                    {/* button to delete product?*/}
+
                 </Col>
             </Row>
-            <p>{product.description}</p>
+            <p className="fs-5 pt-5 mx-5">{product.description}</p>
         </div>
     );
 };
