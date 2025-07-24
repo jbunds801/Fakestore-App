@@ -30,7 +30,7 @@ const HomePage = () => {
                 <Container>
                     <Row className="mb-5 text-center ">
                         <div>
-                            <h1>FakeStore is your home for discovering new items to love!</h1>
+                            <h3>You'll love our FakeStore shopping experience!</h3>
                         </div>
                     </Row>
 
@@ -53,7 +53,6 @@ const HomePage = () => {
                         <Link to='/products'>
                             <Button className="buttons" variant="outline-dark">Products</Button>
                         </Link>
-
                     </div>
                 </Container>
             </div>

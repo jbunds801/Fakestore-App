@@ -3,12 +3,13 @@ import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './NavBar.css';
 
 function NavBar() {
 
     return (
         <>
-            <Navbar bg="dark" data-bs-theme="dark" className="p-3 mb-4">
+            <Navbar data-bs-theme="dark" className="nav-style p-3 mb-4">
                 <Navbar.Brand href="/">FakeStore</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
@@ -19,7 +20,7 @@ function NavBar() {
                         <Nav.Link as={Link} to="/products" activeclassname="active">
                             Products
                         </Nav.Link>
-                        <Nav.Link as={Link} to="/add" activeclassname="active">
+                        <Nav.Link as={Link} to="/addproduct" activeclassname="active">
                             Add Products
                         </Nav.Link>
                     </Nav>
