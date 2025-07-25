@@ -9,8 +9,8 @@ function NavBar() {
 
     return (
         <>
-            <Navbar data-bs-theme="dark" className="nav-style p-3 mb-4">
-                <Navbar.Brand href="/">FakeStore</Navbar.Brand>
+            <Navbar expand="sm" data-bs-theme="dark" className="nav-style p-3 mb-4">
+                <Navbar.Brand className='fs-3 fw-lighter' href="/">FakeStore</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav>

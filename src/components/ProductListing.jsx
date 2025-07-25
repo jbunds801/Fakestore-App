@@ -14,8 +14,8 @@ const ProductListing = () => {
                 setProducts(response.data);
             } catch (error) {
                 console.error('Error fetching products:', error);
-            }
-        }
+            };
+        };
 
         fetchProducts();
     }, []);
@@ -25,6 +25,7 @@ const ProductListing = () => {
     };
 
     if (!products) return <div>Loading...</div>
+
 
     return (
         <>
@@ -60,5 +61,3 @@ const ProductListing = () => {
 };
 
 export default ProductListing;
-
-//should I have put this in a card component?

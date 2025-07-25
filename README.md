@@ -1,12 +1,5 @@
-# React + Vite
+This fake store is made using the FakeStoreAPI and React, and React Bootstrap. I wanted to keep the design clean, simple, and responsive and tried to use as little CSS as possible, mostly sticking to Bootstrap. I added a carousel image to the home page using "fetch" from the API. I made all of the product containers on the products page the same size regardless of image size to keep things consistent. 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+As per the assignment requirements, it has multiple components using React Router to make navigation possible between the pages, and forms to submit and change data from the API using "post" and "put". It has a product page that maps all of the products using "get" from the API, as well as a page for details for each product. There is also a delete product functionality that uses the "delete" request. All of the API requests were done using AXIOS. The add to cart button however does not have functionality.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Website is hosted on Netlify!

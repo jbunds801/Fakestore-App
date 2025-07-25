@@ -16,11 +16,11 @@ body {
 }
 
 footer {
-  margin-top: auto; /* Pushes footer to the bottom */
+  margin-top: auto;
   display: flex;
   justify-content: flex-end;
   padding: 1rem;
-  font-size: 0.75rem;
+  font-size: 0.70rem;
   font-weight: lighter;
 }
 

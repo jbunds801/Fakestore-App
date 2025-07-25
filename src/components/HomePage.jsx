@@ -28,9 +28,10 @@ const HomePage = () => {
         <>
             <div>
                 <Container>
-                    <Row className="mb-5 text-center ">
+                    <Row className="mb-4 text-center ">
                         <div>
-                            <h3>You'll love our FakeStore shopping experience!</h3>
+                            <h3 className="mb-3">Welcome to FakeStore</h3>
+                            <h4>You'll love our fake shopping experience!</h4>
                         </div>
                     </Row>
 
@@ -59,6 +60,6 @@ const HomePage = () => {
         </>
 
     );
-}
+};
 
 export default HomePage;
