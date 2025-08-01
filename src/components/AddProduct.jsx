@@ -94,8 +94,6 @@ const AddProduct = () => {
                             onChange={handleChange}
                         />
                     </Form.Group>
-                </Form>
-
                 <Row>
                     <Col>
                         <div className="mt-5">
@@ -112,6 +110,8 @@ const AddProduct = () => {
                         </div>
                     </Col>
                 </Row>
+                </Form>
+
 
                 <div className="mt-5">
                     {submitted && <Alert variant="info" dismissible>{addTitle} Added Successfully!</Alert>}
