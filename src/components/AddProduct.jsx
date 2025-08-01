@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Row, Col, Form, Alert, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import './AddProduct.css'
 import axios from "axios";
 
@@ -93,13 +94,24 @@ const AddProduct = () => {
                             onChange={handleChange}
                         />
                     </Form.Group>
-
-                    <div className="mt-5">
-                        <Button className='buttons' variant="outline-dark" type="submit">
-                            Submit
-                        </Button>
-                    </div>
                 </Form>
+
+                <Row>
+                    <Col>
+                        <div className="mt-5">
+                            <Button className='buttons' variant="outline-dark" type="submit">
+                                Submit
+                            </Button>
+                        </div>
+                    </Col>
+                    <Col>
+                        <div className="mt-5 d-flex justify-content-end">
+                            <Link to={'/products'}>
+                                <Button className="buttons" variant="outline-dark">Back to Products</Button>
+                            </Link>
+                        </div>
+                    </Col>
+                </Row>
 
                 <div className="mt-5">
                     {submitted && <Alert variant="info" dismissible>{addTitle} Added Successfully!</Alert>}
