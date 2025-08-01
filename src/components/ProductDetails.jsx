@@ -63,7 +63,7 @@ const ProductDetails = () => {
                 <Col lg={8} >
                     <img src={product.image} alt={product.title}
                         className="w-100 d-flex px-1 mx-auto mt-3 mb-5"
-                        style={{ maxHeight: '600px', objectFit: 'contain' }} />
+                        style={{ maxHeight: '500px', objectFit: 'contain' }} />
                 </Col>
                 <Col lg={4} className="px-5 mt-5">
                     <h2>{product.title}</h2>
