@@ -107,7 +107,7 @@ const AddProduct = () => {
                     <Col>
                         <div className="mt-5 d-flex justify-content-end">
                             <Link to={'/products'}>
-                                <Button className="buttons" variant="outline-dark">Back to Products</Button>
+                                <Button className="buttons text-nowrap" variant="outline-dark">Back to Products</Button>
                             </Link>
                         </div>
                     </Col>
